@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>王麟 & 亦晴｜2026.10.03婚禮喜帖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif TC', serif;
+      background: #faf9f7;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .cover {
+      background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                  url('photo2.jpg.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    .names {
+      font-size: 26px;
+      margin: 40px 0;
+    }
+
+    .info {
+      max-width: 480px;
+      margin: auto;
+      font-size: 16px;
+    }
+
+.divider {
+ width: 90px;
+height: 1px;
+background: #bbb;
+margin: 40px auto;
+}
+
+    .map-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      border: 1px solid #999;
+      text-decoration: none;
+      color: #333;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .map-btn:hover {
+      background: #333;
+      color: #fff;
+    }
+
+   .gallery {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.row.two img {
+  width: calc(50% - 8px);
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.row.one img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+    footer {
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    audio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row.two img,
+  .row.one img {
+    width: 100%;
+    height: auto;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- 背景音樂 -->
+  <audio controls autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    您的瀏覽器不支援音樂播放
+  </audio>
+
+  <!-- 封面 -->
+  <section class="cover">
+    <h1>徐生有李 · 聚在這裡</h1>
+    <h2>We tied the knot.</h2>
+  </section>
+
+  <!-- 新人 -->
+  <section>
+    <div class="names">徐王麟 & 李亦晴</div>
+    <div class="divider"></div>
+    <p style="text-align: center;">
+      七年的愛情旅程，終於走到「我們」的新篇章<br>邀請您，一起分享我們的幸福與喜悅
+  </p>
+  </section>
+
+  <!-- 婚紗照 -->
+  <section>
+    <P style="text-align: center;">
+      THE GOOD THINGS IN LIFE<br>
+      ARE BETTER WITH YOU
+    </P>
+    <div class="divider"></div>
+    <div class="gallery">
+<div class="row two">
+      <img src="photo5.jpg" >
+      <img src="photo1.jpg" >
+</div>
+
+<div class="row one">
+      <img src="photo2.jpg" >
+      </div>
+
+<div class="row two">
+      <img src="photo3.jpg" >
+      <img src="photo4.jpg" >
+</div>
+
+<div class="row one">
+      <img src="photo6.jpg" >
+      </div>
+</div>
+  </section>
+
+  <!-- 婚禮資訊 -->
+  <section>
+    <div class="info">
+      <p><strong>日期</strong><br>2026 年 10 月 03 日（星期六）</p>
+      <p><strong>時間</strong><br>午宴 12:30</p>
+      <p><strong>地點</strong><br>台北茹曦酒店 5F斯賓諾莎廳</p>
+      <a class="map-btn" href="https://maps.app.goo.gl/PEv8dh7HgDJPacfJ8" target="_blank">查看 Google 地圖</a>
+    </div>
+  </section>
+
+  <!-- 倒數日 -->
+  <section>
+    <div class="divider"></div>
+    <div id="countdown" style="font-size:20px"></div>
+  </section>
+
+  <footer>
+    We are so glad to celebrate this moment with you.
+  </footer>
+
+  <!-- 倒數計算程式 -->
+  <script>
+    const weddingDate = new Date("2026-10-03");
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diffTime = weddingDate - now;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays > 0) {
+        countdownEl.innerHTML = `距離我們的重要日子，還有 <strong>${diffDays}</strong> 天`;
+} else if (diffDays === 0) {
+countdownEl.innerHTML = "It's the Day (*´∀`)~♥";
+} else {
+countdownEl.innerHTML = "我們已經幸福地走在一起了 🤍";
+}
+}
+      
+    updateCountdown();
+  </script>
+
+</body>
+</html>
