@@ -17,6 +17,11 @@
       line-height: 1.8;
     }
 
+    en{
+      font-family:'Playfair Displya",serif;
+      font-style:italic;
+    }
+
     section {
       padding: 80px 24px;
       text-align: center;
@@ -24,7 +29,7 @@
 
     .cover {
       background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                  url('photo2.jpg.jpg');
+                  url('photo2.jpg');
       background-size: cover;
       background-position: center;
       min-height: 100vh;
@@ -57,11 +62,23 @@
       font-size: 16px;
     }
 
+@media (max-width: 600px) {
+  .gallery img {
+    width: 90%;
+    height: auto;
+  }
+}
+
 .divider {
  width: 90px;
-height: 1px;
-background: #bbb;
-margin: 40px auto;
+height: 2px;
+background: #FFCCCC;
+margin: 60px auto;
+}
+
+.divider.vertical {
+  width: 2px;
+  height: 90px;
 }
 
     .map-btn {
@@ -142,7 +159,8 @@ margin: 40px auto;
   <!-- 封面 -->
   <section class="cover">
     <h1>徐生有李 · 聚在這裡</h1>
-    <h2>We tied the knot.</h2>
+  <div class="divider vertical"></div>
+    <h2 calss="en">We tied the knot.</h2>
   </section>
 
   <!-- 新人 -->
@@ -163,23 +181,22 @@ margin: 40px auto;
     <div class="divider"></div>
     <div class="gallery">
 <div class="row two">
-      <img src="photo5.JPG" >
-      <img src="photo1.JPG" >
+      <img src="photo5.jpg" >
+      <img src="photo1.jpg" >
 </div>
 
 <div class="row one">
-      <img src="photo2.JPG" >
+      <img src="photo2.jpg" >
       </div>
 
 <div class="row two">
-      <img src="photo3.JPG" >
-      <img src="photo4.JPG" >
+      <img src="photo3.jpg" >
+      <img src="photo4.jpg" >
 </div>
 
 <div class="row one">
       <img src="photo6.jpg" >
       </div>
-      
 </div>
   </section>
 
@@ -227,6 +244,3 @@ countdownEl.innerHTML = "我們已經幸福地走在一起了 🤍";
 
 </body>
 </html>
-
-
-
